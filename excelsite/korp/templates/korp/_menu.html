@@ -1,0 +1,13 @@
+{% load korp_tags %}
+
+{% block menu %}
+
+   <div class="moduletablehormenu">
+       <a href="{%  url 'kurs_ref' 0  %}">КУРС USD, EUR НА СЕГОДНЯ <br/> {{day_today}} </a>
+       <a href="{%  url 'kurs_ref' 1  %}">КУРС USD, EUR НА ВЧЕРА<br/>{{ day_yesturday }}</a>
+       <a href="{%  url 'kurs_ref' 2  %}">КУРС USD, EUR НА ПОЗАВЧЕРА<br/> {{ day_2 }}</a>
+       <a href="{%  url 'update_ref'  %}">UPDATE</a>
+
+
+        </div>
+{% endblock %}

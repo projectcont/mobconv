@@ -1,0 +1,13 @@
+@media screen and (orientation : portrait){
+div.wrapper {   min-width:100px;   }
+div.center { min-width:100px;  border:0px solid brown;  }
+
+
+*, html * { font-size:40px !important; line-height:55px !important }
+#content * { font-size:60px !important; line-height:80px !important }
+
+#effect_notice { font-size:60px !important; line-height:80px !important }
+
+}
+
+

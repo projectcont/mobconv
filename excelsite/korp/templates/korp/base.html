@@ -1,0 +1,103 @@
+{% load static %}
+
+
+<!doctype html>
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" lang="ru" dir="ltr" prefix="og: http://ogp.me/ns#" > <!--<![endif]-->
+<head>
+
+
+<meta name="description" content="Курсы валют" />
+    <title>  {{ pagetitle }} </title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <link rel="stylesheet"  href="{%  static 'korp/css/user.css' %} "  />
+    <link rel="stylesheet"  href="{%  static 'korp/css/small.css' %} "  />
+
+
+
+ <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+ <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body >
+
+<!--   menu   -->
+  <div class="wrapper menu" id="menu"    >
+       <div class="center" >{% include "korp/_menu.html" %}
+        </div>    <!--  center    -->
+   </div>         <!--   wrapper   -->
+<!--   menu   -->
+
+
+<!--   content   -->
+  <div class="wrapper" >
+       <div class="center" id="content" >
+
+
+            <!--   YESTORDAY  -->
+           {% if day == 0 %}
+          <h1>  {{ title }} ({{ day_today }}) </h1>
+            <h3 style="text-align:center">  {{ comment }} </h3>
+
+          <p> Курс USD/RUB= {{ usd }} </p>
+           <p> Курс EUR/RUB= {{ eur }} </p>
+
+           {% endif %}
+
+            <!--   YESTURDAY  -->
+           {% if day == 1 %}
+           <h1> {{ title }}  ({{ day_yesturday }})</h1>
+            <h3 style="text-align:center">  {{ comment }} </h3>
+            <p> Курс USD/RUB= {{ usd }} </p>
+           <p> Курс EUR/RUB= {{ eur }} </p>
+           {% endif %}
+
+
+            <!--   2 days ago   -->
+           {% if day == 2 %}
+           <h1> {{ title }}  ({{ day_2 }}) </h1>
+            <h3 style="text-align:center">  {{ comment }} </h3>
+            <p> Курс USD/RUB= {{ usd }} </p>
+           <p> Курс EUR/RUB= {{ eur }} </p>
+           {% endif %}
+
+
+           <!--   text data   -->
+           {% if day == 3 %}
+           <h1> {{ title }}  ({{ day_2 }}) </h1>
+            <h3 style="text-align:center">  {{ comment }} </h3>
+            <p> Курс USD/RUB= {{ usd }} </p>
+           <p> Курс EUR/RUB= {{ eur }} </p>
+           {% endif %}
+
+
+	    {% block content %}   {% endblock %}
+        </div>    <!--  center    -->
+   </div>         <!--   wrapper   -->
+<!--   content   -->
+
+
+<!--   slider   -->
+{% include "korp/_particle.html" %}
+<!--   slider -->
+
+
+<!--   polosa   -->
+  <div class="wrapper under" >
+       <div class="center" >
+	 {% include "korp/_polosa.html" %}
+        </div>    <!--  center    -->
+   </div>         <!--   wrapper   -->
+<!--   polosa   -->
+
+
+
+<style>
+div#top {background-image:url('{%  static 'korp/images/fon.jpg' %}'); }
+div.under {background-image:url('{%  static 'korp/images/fon2.jpg' %}'); }
+</style>
+
+
+</body>
+</html>
