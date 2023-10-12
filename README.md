@@ -10,7 +10,6 @@ Python приложение по ссылке http://127.0.0.1:8000/
 - сохраняет в БД 
 
 Для периодического выполнение этой операции используется пакет django-apscheduler
-# https://github.com/devchandansh/django-apscheduler/blob/master/example_project/example_project/urls.py
 Его файлы расположены в каталоге excelsite/cron/
 Так как функция (запрос внешнего API) выполняется один раз в сутки, 
 и этот запрос короткий, то можно обойтись без CELERY
